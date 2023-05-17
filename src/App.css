@@ -41,7 +41,7 @@ form button {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.15rem;
-    /* background-color: green; */
+    margin-top: -1.5rem;
 }
 
 h3 {

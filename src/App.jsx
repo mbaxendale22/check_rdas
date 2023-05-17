@@ -101,6 +101,7 @@ function App() {
                     <button type="submit">Lets see what's cooking</button>
                 </form>
             </div>
+            <h3>% per portion</h3>
             <div className="results">
                 <div>
                     <p>SALT {outputValues.final_salt}%</p>
