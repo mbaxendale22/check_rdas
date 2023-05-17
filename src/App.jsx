@@ -1,5 +1,3 @@
-// @ts-check
-
 import * as React from 'react'
 
 import './App.css'
@@ -42,10 +40,6 @@ function App() {
         }
     }
 
-    /**
-     * Submit handler for the main form
-     * @param {React.SyntheticEvent} e - event
-     */
     const handleChange = (e) => {
         const newArr = {
             ...inputValues,
@@ -64,7 +58,7 @@ function App() {
         <>
             <div className="card">
                 <form onSubmit={handleSubmit}>
-                    {/* <h3>Enter values are per 100g</h3> */}
+                    <h3>Enter values in grams</h3>
                     <label htmlFor="salt">
                         How much salt does this thing have?
                     </label>
@@ -73,7 +67,7 @@ function App() {
                         onChange={handleChange}
                         value={inputValues.salt}
                     ></input>
-                    <label htmlFor="fat">How about Fats?</label>
+                    <label htmlFor="fat">How about fats?</label>
                     <input
                         name="fat"
                         onChange={handleChange}
@@ -108,10 +102,14 @@ function App() {
                 </form>
             </div>
             <div className="results">
-                <p>SALT: {outputValues.final_salt}%</p>
-                <p>FAT: {outputValues.final_fat}%</p>
-                <p>SATURATED FAT: {outputValues.final_satfat}%</p>
-                <p>SUGARS: {outputValues.final_sugar}%</p>
+                <div>
+                    <p>SALT {outputValues.final_salt}%</p>
+                    <p>FAT {outputValues.final_fat}%</p>
+                </div>
+                <div>
+                    <p>SATURATES {outputValues.final_satfat}%</p>
+                    <p>SUGARS {outputValues.final_sugar}%</p>
+                </div>
             </div>
         </>
     )
